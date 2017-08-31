@@ -1,0 +1,16 @@
+
+view:
+    path:     /view/{id_four}
+    defaults:
+        _controller: MSIFournisseurBundle:Commande:view
+    requirements:
+        id_four: \w+
+
+edit:
+    path:     /edit
+    defaults: { _controller: MSIFournisseurBundle:Commande:edit }
+
+load_csv:
+    path:     /load
+    defaults:
+        _controller: MSIFournisseurBundle:Commande:load

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MSI\FournisseurBundle\Entity\InfoCommandeFournisseur" table="info_commande_fournisseur">
+    <id name="cmde" type="string" column="CMDE" length="255"/>
+    <id name="cmdeLigne" type="integer" column="CMDE_LIGNE"/>
+    <field name="no" type="string" column="No_" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="fst" type="string" column="FST" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="reference" type="string" column="REFERENCE" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="designation" type="string" column="DESIGNATION" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="totCmde" type="integer" column="TOT_CMDE" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="qteRestante" type="integer" column="Qte_restante" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="dateLiv" type="date" column="Date_liv" nullable="true"/>
+    <field name="mntHt" type="string" column="MNT_HT" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="mntTotalHt" type="string" column="MNT_TOTAL_HT" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="mntDu" type="string" column="MNT_DU" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="flag" type="boolean" column="flag" nullable="false">
+      <options>
+        <option name="default">0</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

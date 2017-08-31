@@ -1,0 +1,4 @@
+services:
+#    msi_fournisseur.example:
+#        class: MSI\FournisseurBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

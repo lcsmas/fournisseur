@@ -1,0 +1,3 @@
+msi_fournisseur:
+    resource: "@MSIFournisseurBundle/Resources/config/routing.yml"
+    prefix:   /fournisseur
