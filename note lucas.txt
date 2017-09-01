@@ -1,0 +1,18 @@
+﻿adresse site web = relance.ftp-msi.fr
+url connexion ftp = ftp://ftpmsi-relance:Lucas2017@ftp.ftp-msi.fr/
+
+
+OVH phpmyadmin : https://phpmyadmin.ovh.net
+Serveur : ftpmsicp.mysql.db
+Base : ftpmsicp
+password : Lucas2017
+
+
+Requête implémentant le csv dans la base mysql :
+	LOAD DATA LOCAL INFILE 'nav.csv'
+	INTO TABLE info_commande_fournisseur
+	FIELDS TERMINATED BY ';'
+	ENCLOSED BY ''
+	LINES TERMINATED BY '\n'
+	IGNORE 1 LINES
+	(No_,FST,CMDE,CMDE_LIGNE,REFERENCE,DESIGNATION,TOT_CMDE,Qte_restante,Date_liv,MNT_HT,MNT_TOTAL_HT,MNT_DU)

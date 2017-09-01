@@ -1,6 +1,12 @@
 <?php
 
-class CSVManager 
+namespace MSI\FournisseurBundle\Tools;
+
+use League\Csv\Reader;
+use Doctrine\DBAL\DriverManager;
+use \PDO;
+
+class CSVManager
 {
 
   public function loadCSV_to_DataBase(){

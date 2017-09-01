@@ -1,7 +1,33 @@
 {% extends "::base.html.twig" %}
 
+{% block js %}{% endblock %}
+
 {% block title %}MSIFournisseurBundle:Commande:view{% endblock %}
 
 {% block body %}
 <h1>Welcome to the Commande:view page</h1>
+
+
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Commande</th>
+      <th>Ligne</th>
+      <th>Date Livraison</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for commande in commandes %}
+    <tr onclick="window.document.location='{{ path('edit', {'cmde': commande.cmde, 'cmdeLigne': commande.cmdeLigne}) }}';">
+        <th scope="row">{{ commande.cmde }}</th>
+        <th scope="row">{{ commande.cmdeLigne }}</th>
+        <td> {{ commande.dateLiv|date("d/m/Y") }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
 {% endblock %}

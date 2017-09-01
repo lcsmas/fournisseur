@@ -1,14 +1,18 @@
 
 view:
-    path:     /view/{id_four}
+    path:     /view/{fst}
     defaults:
         _controller: MSIFournisseurBundle:Commande:view
     requirements:
-        id_four: \w+
+        fst: \w+
 
 edit:
-    path:     /edit
-    defaults: { _controller: MSIFournisseurBundle:Commande:edit }
+    path:     /edit/{cmde}/{cmdeLigne}
+    defaults:
+        _controller: MSIFournisseurBundle:Commande:edit
+    requirements:
+        cmde: \w+
+        cmdeLigne: \d+
 
 load_csv:
     path:     /load
